@@ -1,18 +1,22 @@
 +++
-title = "DocDock Theme for Hugo"
+title = "Nutanix实验室"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
 
 +++
 
-# Hugo docDock theme
-[Hugo-theme-docdock {{%icon fa-github%}}](https://github.com/vjeantet/hugo-theme-docdock) is a theme for Hugo, a fast and modern static website engine written in Go. Hugo is often used for blogs, **this theme is fully designed for documentation.**
+# 简介
+[Nutanix-lab/lab-guide {{%icon fa-github%}}](https://github.com/Nutanix-lab/lab-guide) 代码仓库是本站的文档源码，里面包含了一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。, **这是一个免费开放的平台，我们欢迎任何人提交你的使用技巧和心得等文章。**
 
-This theme is a partial porting of the [Learn theme of matcornic {{%icon fa-github%}}](https://github.com/matcornic/hugo-theme-learn).
+其它相关的站点包括，Nutanix官方的Github账号[Nutanix {{%icon fa-github%}}](https://github.com/Nutanix/)；[Nutanix全球用户支持门户 {{%icon fa-bookmark%}}](https://portal.nutanix.com//)
 
-{{%panel%}}docDock works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-organisation/_index.md"%}}) {{%/panel%}}
+ {{%panel%}}
+ * Nutanix中国官方微信公众号 ： Nutnaix-China
+ * IT锐观察： CHINAEUC
+ * [Nutanix圣经](http://nutanixbible.com/)
+  {{%/panel%}}
 
-## Main features
+## 主要内容 
 
 * [Search]({{%relref "search/_index.md" %}})
 * **Unlimited menu levels**
@@ -49,4 +53,3 @@ Automatically published and hosted thanks to [Netlify](https://www.netlify.com/)
 
 Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
 {{% /panel %}}
-

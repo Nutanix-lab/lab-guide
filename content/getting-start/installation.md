@@ -1,6 +1,6 @@
 +++
-title = "Installation"
-description = ""
+title = "安装"
+description = "产品安装说明和指导"
 weight = 1
 +++
 
@@ -9,9 +9,14 @@ weight = 1
 The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
 <!--more-->
 
-## Installation
+## 安装
 
 We assume that all changes to Hugo content and customizations are going to be tracked by git (GitHub, Bitbucket etc.). Develop locally, build on remote system.
+
+
+Style "Original"
+
+![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?width=20pc&classes=border,shadow)
 
 Before start real work:
 

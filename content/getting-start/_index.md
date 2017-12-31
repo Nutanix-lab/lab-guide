@@ -1,12 +1,16 @@
 +++
-title = "Getting started"
+title = "基本配置"
 description = ""
 weight = 1
 alwaysopen = true
 +++
 
-## Requirements
+## 环境需求
 
-Download [Hugo binary](https://gohugo.io/overview/installing/) for your OS (Windows, Linux, Mac) : it’s that simple
+下载并安装最新版本的 [Nutanix产品](https://portal.nutanix.com) 。本站所使用的系统环境版本如下：
+
+* AOS(NOS):
+* Nutanix AHV:
+* Prism Central:
 
 {{%children style="h2" description="true"%}}

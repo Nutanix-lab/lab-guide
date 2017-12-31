@@ -1,6 +1,6 @@
 +++
-title = "Configuration"
-description = ""
+title = "配置"
+description = "最基本的配置"
 weight = 2
 +++
 
