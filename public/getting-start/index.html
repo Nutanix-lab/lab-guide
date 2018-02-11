@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Docdock</title>
+    <title>Nutanix实验室</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.29" />
 
-<title>Getting started :: Docdock</title>
+<title>基本配置 :: Nutanix实验室</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -15,6 +15,8 @@
 <link href="/css/featherlight.min.css" rel="stylesheet">
 <link href="/css/auto-complete.css" rel="stylesheet">
 <link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-green.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <script src="/js/jquery-2.x.min.js"></script>
@@ -48,14 +50,14 @@
       
 	
   
-    <p>DocDock Documentation</p>
+    <p>Nutnaix实验室</p>
 
   
 
     </div>
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
-		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <input data-search-input id="search-by" type="text" placeholder="">
 		    <span data-search-clear=""><i class="fa fa-close"></i></span>
 		</div>
 		<script type="text/javascript" src="/js/lunr.min.js"></script>
@@ -74,18 +76,18 @@
             </li>
     <li data-nav-id="/getting-start/" class="dd-item parent active alwaysopen">
       <a href="/getting-start/">
-        <span>Getting started</span>
+        <span>基本配置</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
       <li data-nav-id="/getting-start/installation/" class="dd-item">
         <a href="/getting-start/installation/">
-          <span>Installation</span><i class="fa fa-circle-thin read-icon"></i>
+          <span>安装</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/getting-start/configuration/" class="dd-item">
         <a href="/getting-start/configuration/">
-          <span>Configuration</span><i class="fa fa-circle-thin read-icon"></i>
+          <span>配置</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -284,12 +286,12 @@
 
 
         <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
-                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i> Showcases</a></li>
-                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Documentation</a></li>
+                <li class="" role=""><h3>更多</h3><a href="https://github.com/Nutanix-lab/lab-guide" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github代码库</a></li>
+                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i>友情链接</a></li>
+                <li class="" role=""><a href="http://nutnaix.martinliu.cn/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Nutanix实验室</a></li>
                 <li class="" role=""><a href="/credits" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> Credits</a></li>
         </section>
-            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> </a>
 
     <hr />
     <li></li>
@@ -325,9 +327,9 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/getting-start/_index.md" target="blank">
+      <a class="github-link" href="https://github.com/Nutanix-lab/lab-guide/edit/master/contentgetting-start/_index.md" target="blank">
         <i class="fa fa-code-fork"></i>
-        Edit page
+        
       </a>
     </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
         <span id="sidebar-toggle-span">
@@ -342,7 +344,7 @@
 
 
 
- <a href='/'>DocDock Theme for Hugo</a> > Getting started
+ <a href='/'>Nutanix实验室</a> > 基本配置
 
  
 
@@ -357,7 +359,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#requirements">Requirements</a></li>
+<li><a href="#环境需求">环境需求</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -370,7 +372,7 @@
 
 <div id="body-inner">
   
-    <h1>Getting started</h1>
+    <h1>基本配置</h1>
   
 
 
@@ -381,17 +383,23 @@
 
 
 
-<h2 id="requirements">Requirements</h2>
+<h2 id="环境需求">环境需求</h2>
 
-<p>Download <a href="https://gohugo.io/overview/installing/">Hugo binary</a> for your OS (Windows, Linux, Mac) : it’s that simple</p>
+<p>下载并安装最新版本的 <a href="https://portal.nutanix.com">Nutanix产品</a> 。本站所使用的系统环境版本如下：</p>
+
+<ul>
+<li>AOS(NOS):</li>
+<li>Nutanix AHV:</li>
+<li>Prism Central:</li>
+</ul>
 
 
 
 <ul class="children children-h2"><h2>
-	<a href="/getting-start/installation/" >Installation</a></h2>
-<p></p><h2>
-	<a href="/getting-start/configuration/" >Configuration</a></h2>
-<p></p>
+	<a href="/getting-start/installation/" >安装</a></h2>
+<p>产品安装说明和指导</p><h2>
+	<a href="/getting-start/configuration/" >配置</a></h2>
+<p>最基本的配置</p>
 </ul>
 
 
@@ -410,8 +418,8 @@
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/" title="DocDock Theme for Hugo"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/getting-start/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/" title="Nutanix实验室"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/getting-start/installation/" title="安装" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

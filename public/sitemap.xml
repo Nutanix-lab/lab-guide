@@ -3,72 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/content-organisation/logo/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/03-nucalm-middle/01-helloworld/</loc>
   </url>
   
   <url>
-    <loc>/getting-start/</loc>
+    <loc>/02-nucalm-basic/01-configure-calm/</loc>
   </url>
   
   <url>
-    <loc>/getting-start/installation/</loc>
+    <loc>/00-getting-start/</loc>
   </url>
   
   <url>
-    <loc>/content-organisation/extramenu/</loc>
-    <lastmod>2017-04-29T18:36:24+02:00</lastmod>
+    <loc>/00-getting-start/installation/</loc>
   </url>
   
   <url>
-    <loc>/getting-start/configuration/</loc>
+    <loc>/03-nucalm-middle/02-3layer/</loc>
   </url>
   
   <url>
-    <loc>/content-organisation/customize-style/</loc>
+    <loc>/02-nucalm-basic/02-deploy-bp/</loc>
   </url>
   
   <url>
-    <loc>/create-page/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/00-getting-start/configuration/</loc>
   </url>
   
   <url>
-    <loc>/content-organisation/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/03-nucalm-middle/03-ec2-demo/</loc>
   </url>
   
   <url>
-    <loc>/shortcodes/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/02-nucalm-basic/03-config-cat/</loc>
   </url>
   
   <url>
-    <loc>/search/</loc>
+    <loc>/03-nucalm-middle/04-lamp-bp/</loc>
   </url>
   
   <url>
-    <loc>/create-page/homepage/</loc>
-    <lastmod>2017-04-28T18:36:24+02:00</lastmod>
+    <loc>/02-nucalm-basic/04-create-template/</loc>
   </url>
   
   <url>
-    <loc>/create-page/page-images/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/01-prism-central/</loc>
+  </url>
+  
+  <url>
+    <loc>/02-nucalm-basic/</loc>
+  </url>
+  
+  <url>
+    <loc>/03-nucalm-middle/</loc>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/create-page/myslide/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/create-page/page-slide/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url>
   
@@ -92,125 +83,20 @@
   </url>
   
   <url>
-    <loc>/content-organisation/customize-style/disable/</loc>
-  </url>
-  
-  <url>
     <loc>/showcase/</loc>
   </url>
   
   <url>
-    <loc>/tags/tag1/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/tag2/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/content-organisation/customize-style/themestyle/</loc>
+    <loc>/01-prism-central/00-deploy-pc/</loc>
   </url>
   
   <url>
-    <loc>/content-organisation/customize-style/theme-variants/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/alert/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/attachments/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/button/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/excerpt/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/excerpt-include/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/expand/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/icon/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/mermaid/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/notice/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-1/children-1-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-1/children-1-1/children-1-1-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-2/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-3/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-4/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/test/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/children/children-2/test3/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/panel/</loc>
-  </url>
-  
-  <url>
-    <loc>/shortcodes/revealjs/</loc>
+    <loc>/01-prism-central/01-configure-pc/</loc>
   </url>
   
 </urlset>

@@ -1,103 +1,154 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DocDock Theme for Hugo on Docdock</title>
+    <title>Nutanix实验室</title>
     <link>/</link>
-    <description>Recent content in DocDock Theme for Hugo on Docdock</description>
+    <description>Recent content on Nutanix实验室</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Logo placeholder</title>
-      <link>/content-organisation/logo/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>/content-organisation/logo/</guid>
-      <description>Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen).
-Tip : you can add a image, a combobox with links to other documentation&amp;hellip;. Tip 2 : look at extra static menu if you want to add links to other website in this sidebar </description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>/getting-start/installation/</link>
+      <title>HelloWorld蓝图</title>
+      <link>/03-nucalm-middle/01-helloworld/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/getting-start/installation/</guid>
-      <description>&lt;div class=&#34;alert 
-alert-warning&#34;
- 
-role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.30&lt;/strong&gt; minimum required to use this theme&lt;/div&gt;
-
-
-&lt;p&gt;The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;great documentation for beginners&lt;/a&gt;.
-&lt;/p&gt;</description>
+      <guid>/03-nucalm-middle/01-helloworld/</guid>
+      <description>这个lab的目标：
+ 蓝图使用上面的CentOS7的模板镜像 在创建工作流里生成一个包含Hello World字符串的文件/helloworld.txt 这个蓝图可以生成自定义配置的n台虚拟机 运行这个蓝图生成3个虚拟机 使用Stop工作流，poweroff这三个虚拟机 使用Start工作流，poweron这三个虚拟机 使用Delete工作流删除这三个虚拟机实例  操作步骤如下。
+点击左侧的第二个蓝图按钮，点击 创建应用蓝图 按钮。 选择这个蓝图部署的项目名称，点击处理按钮。 点击配置按钮，填写应用配置信息。 填写蓝图名称和描述。 点击Credentials按钮，输入一个root用户信息，用于登录自动化生成的虚拟机，例如 root / nutnaix/4u , 输入完密码后再空白处点击一下，在点击密码框中右侧的眼睛按钮，确认保存的密码。点击 back按钮。 点击 Save 按钮保存当前的配置，其实也是检查当前配置信息的正确性，否则保存不会成功。 点击右下角的Create按钮，配置创建工作流，输入如图所示的信息。选择的 Image 模板名称是上个步骤里生成的模板。
+选择该蓝图的这个服务VM的配置信息，包括用于ssh登录的账户信息。 点击 save 按钮保存蓝图配置，点击Launch按钮，部署这个蓝图。 输入此次应用部署的名称，点击 create 按钮。 观察当前这个蓝图部署的状态。 点击 Manager ，点击 Create 创建工作流右侧的眼睛按钮，查看当前自动化工作流执行的进度和状态。 全部都是绿色表示一切正常。 在PC的虚拟机查看控制台刚才的部署生成的vm和它的状态。 SSH登录到这个虚拟机，运行下面的命令查看目标的文件是否部署成功。
+[root@localhost ~]# ls / bin etc lib mnt root srv usr boot helloworld.txt lib64 opt run sys var dev home media proc sbin tmp [root@localhost ~]# cat /helloworld.</description>
     </item>
     
     <item>
-      <title>Extra menu entries</title>
-      <link>/content-organisation/extramenu/</link>
-      <pubDate>Sat, 29 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>/content-organisation/extramenu/</guid>
-      <description>You can define additional menu entries in the navigation menu without any link to content.
-Edit the website configuration config.toml and add a [[menu.shortcuts]] entry for each link your want to add.
-Example from the current website, note the pre param which allows you to insert HTML code and used here to separate content&amp;rsquo;s menu from this &amp;ldquo;static&amp;rdquo; menu
-[[menu.shortcuts]] pre = &amp;quot;&amp;lt;h3&amp;gt;More&amp;lt;/h3&amp;gt;&amp;quot; name = &amp;quot;&amp;lt;i class=&#39;fa fa-github&#39;&amp;gt;&amp;lt;/i&amp;gt; Github repo&amp;quot; identifier = &amp;quot;ds&amp;quot; url = &amp;quot;https://github.</description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>/getting-start/configuration/</link>
+      <title>初始化配置Calm</title>
+      <link>/02-nucalm-basic/01-configure-calm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/getting-start/configuration/</guid>
-      <description>&lt;p&gt;When building the website, you can set a theme by using &lt;code&gt;--theme&lt;/code&gt; option. We suggest you to edit your configuration file and set the theme by default. Example with &lt;code&gt;config.toml&lt;/code&gt; format.
-&lt;/p&gt;</description>
+      <guid>/02-nucalm-basic/01-configure-calm/</guid>
+      <description> AWS账户的配置 由于Calm是多云管理，因此很多已经在Nutanix商店里的蓝图都支持AWS的部署，下面需要配置一个假的AWS账户信息，这样在使用预定义蓝图的时候减少提示信息出现的机会。
+App页面里，左侧齿轮图标，进入AWS账户配置页面，点击 Add Setting 按钮。
+在这个页面中输入任一的 Access Key ID 和 Secret Access Key 字符串。保证点击Save后正确地保存了一条记录即可。 配置Calm项目 点击左侧最下面的图标，进入项目配置页面，点击 Create Project 按钮。
+输入该项目的相关信息：
+ 项目名称：可以是一个应用开发团队，或者一个业务应用一个项目 用户和角色信息：下图设置 ssp_user 组里的所有人的角色是 Developer，可以设置其他的AD用户为其它各种的Role 选中 Local and Cloud Resource 选这个项目默认使用的AHV cluster，选中该项目所能使用的网络 输入该项目的资源配额 选中刚才输入的AWS账户  点击 Save 按钮之后，选中页面中的 环境 那个标签
+在这个页面的连个标签页面中输入必要的信息，这里需要配置一个root账户信息，可以是用户名密码的，用在Calm登录虚拟机的时候。
+以上步骤的验收标准： 使用PC的默认用户名和密码成功登陆新安装的PC。 </description>
     </item>
     
     <item>
-      <title>Home page</title>
-      <link>/create-page/homepage/</link>
-      <pubDate>Fri, 28 Apr 2017 18:36:24 +0200</pubDate>
+      <title>安装AHV群集</title>
+      <link>/00-getting-start/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/create-page/homepage/</guid>
-      <description>To tell Hugo-theme-docdock to consider a page as homepage&amp;rsquo;s content, just create a content file named _index.md in content folder.</description>
+      <guid>/00-getting-start/installation/</guid>
+      <description>AHV 20170830.58 需要最小的版本，这个版本是Nutnaix Calm内置于PC中的起始版本。 安装配置好AHV Cluster，配置好两个服务IP，如下图所示。
+如果以上的数据服务IP不设置，在将AHV群集注册到PC里的时候会报错，而无法完成注册。
+以上步骤的验收标准： 能使用AHV群集默认的初始化密码登陆PE。 </description>
     </item>
     
     <item>
-      <title>About images</title>
-      <link>/create-page/page-images/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
+      <title>三层LAMP应用蓝图</title>
+      <link>/03-nucalm-middle/02-3layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/create-page/page-images/</guid>
-      <description> Images have a similar syntax to links but include a preceding exclamation point.
-![agence](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg)  Resizing image Add HTTP parameters width and/or height to the link image to resize the image. Values are CSS values (default is auto).
-![Hackathon](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?height=80px)  Add CSS classes Add a HTTP classes parameter to the link image to add CSS classes. shadow and border are available but you could define other ones.
-![s](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?classes=border,shadow)  </description>
+      <guid>/03-nucalm-middle/02-3layer/</guid>
+      <description>本Lab的目标： * 使用一个下载的别人开发的蓝图 * 导入在自己的项目中 * 在本地项目的蓝图编辑器里修改成一个可以正常运行的蓝图 * 使用当前项目的配额测试和部署这个蓝图的应用 * 使用和测试蓝图中所定义的自动化运维流程 * 修改和增加自定义的应用服务自动化维护场景（可选）
+蓝图的下载地址：http://lab.digitalformula.net/calm-lab-3.0/blueprints/2017.12.06.LAMP.RC6.json.zip
+下载后解压缩得到蓝图的 json 文件。
+在App页面中点击左侧的第二个按钮，进入蓝图管理，点击 Upload Blueprint 按钮，通过上传的方式新建一个蓝图。点击后选择刚才下载的json蓝图文件。
+输入这个蓝图在本地的名称和部署的项目。点击 上传 按钮。 上传之后进入该蓝图的编辑模式，可以点击图中的红色感叹号，了解当前蓝图里必须修改的配置点。然后逐一检查和确认每一项配置，保证所有配置和当前的项目和资源池匹配。
+点击 Credentials 按钮，将密码更新为上述步骤中创建的模板机的root口令， Credentials name最好保持不变。点击空白处和密码查看的眼睛图标，确认密码应保存住了，点击 back 按钮。
+依次点击左下角Service清单中的三项服务，修改每项服务中的详细配置，如下图所示。 确保使用正确的登录密码信息。 点击保存按钮，确认整个蓝图的配置信息都是正确的，点击 Lunch 按钮部署这个蓝图。 输入这次蓝图部署的名称，点击Create按钮，创建这个部署。 在应用部署界面中观察 Create 工作流的执行状态。 在虚拟机控制台里观察虚拟机创建的状态和结果。 部署完毕之后可以范围 负载均衡 服务状态查看地址： http://10.21.11.55:8080/stats
+如果右下方的两个服务的状态都是UP的话，这表明整套服务部署成功了。然后访问 http://haproxy_vm_ip/ 浏览应用服务页面。
+以上步骤的验收标准： 可以登录用户蓝图生成的vm，能看到三层应用的Web界面。 </description>
     </item>
     
     <item>
-      <title>My Slide ! fullscreen</title>
-      <link>/create-page/myslide/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
+      <title>导入Nutanix Calm商店里的蓝图</title>
+      <link>/02-nucalm-basic/02-deploy-bp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/create-page/myslide/</guid>
-      <description> In the morning Getting up  Turn off alarm Get out of bed  Breakfast  Eat eggs Drink coffee  In the evening Dinner  Eat spaghetti Drink wine  Going to sleep  Get in bed Count sheep  </description>
+      <guid>/02-nucalm-basic/02-deploy-bp/</guid>
+      <description>Nutanix Calm商店是在公网上的，点击左侧的图标，如果当前的这个Cluster可以上互联网就可以看到如图所示的应用清单，这些是Nutanix已经测试打包好的应用蓝图。
+选择若干种应用蓝图，选中那些项目需要使用这个蓝图，点击 Apply 之后，点击 Publish按钮，这样这个蓝图就下载并且导入到了本地的Calm应用商店里。
+下图是导入完之后的结果，点击左侧最上面的按钮后，可以看到本地应用商店的状态。 以上步骤的验收标准： 本地的应用商店里获取到了可以部署的应用蓝图，这些蓝图是成功地从互联网上下载到本地。 </description>
     </item>
     
     <item>
-      <title>Present a Slide</title>
-      <link>/create-page/page-slide/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
+      <title>配置和部署AD</title>
+      <link>/00-getting-start/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/create-page/page-slide/</guid>
-      <description>A basic md content page can be rendered as a reveal.js presentation full screen.
-You can, also, embed presentation in a page as a small box, using the revealjs shortcode in your md file. Formating Use your common Markdown syntax you use in Hugo, don&amp;rsquo;t forget, you can put html tags too.
-Special syntax (in html comment) is available for adding attributes to Markdown elements. This is useful for fragments, amongst other things.</description>
+      <guid>/00-getting-start/configuration/</guid>
+      <description>AD或者LDAP服务器是配置PC的必备的服务，在使用PC提供的自助服务门户的时候，需要使用AD作为用户认证的来源。
+工作内容包括：
+ 建立SSP（自助服务）所需要的组和用户 建立管理员组：ssp_admin 建立用户组： ssp_user 在这两个组里建立若干个测试用户，用于测试SSP中的不同角色。  以上工作内容贯彻了下面文档的所有步骤，作为一次WorkShop中的完整的配置。如果你使用已有的AD服务器，请参考以上配置，并不需要建立以上的用户和组。
+ 建立的组如下图所示：
+用户和组建立完成之后的结果如下图所示：
+以上步骤的验收标准： 记录新建/已有测试账户的用户名和密码，每一个账户都可以成功地登陆AD域。 </description>
+    </item>
+    
+    <item>
+      <title>模拟AWS EC2蓝图</title>
+      <link>/03-nucalm-middle/03-ec2-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/03-nucalm-middle/03-ec2-demo/</guid>
+      <description>这个lab的目标：
+ 蓝图使用上面的CentOS7的模板镜像 创建模仿AWS EC2虚拟机服务的蓝图 建立两种规格的虚拟机 可以设置虚拟机的其它各种参数  参考蓝图 可以在GitHub下载本文示例蓝图文件，网址：https://github.com/Nutanix-lab/calm。 下面是这个蓝图的关键配置讲解。
+应用基础配置 - Application Profile 在变量清单这里增加一个vm_hostname变量，设置初始值为vmhostname
+EC2服务配置 - 规格参数  配置VM Name，设置两个变量组成的虚拟机名称，用于在Prism里查询 配置 martin-centos-t1 为初始化的默认镜像，点亮右侧的小人，这样就可以使蓝图的使用者在运行这个蓝图的时候，选择这个参数的值，而不是预想定死的   添加一块数据盘，初始8GB，用户可变更 配置默认网络为vlan128，用户可变更（右侧小蓝人已经被点亮）  EC2服务配置 - 软件包安装  基于martin-centos-t1模板的预装软件包，如果有其它扩展安装和配置的可以把命令写在这里 这里使用了一个修改虚拟机主机名的操作  EC2服务配置 - 虚拟机副本数量  默认配置为1，用户运行时可变  测试EC2蓝图 在蓝图编辑器里点击右上角的Launch按钮。
+ 配置这次部署的应用名称 修改vm_hostname的名称为 xyz-bank 点击VM Configuration下面的EC2，在里面可以看到所有运行时可以变更的参数，找到参数：number of replicas ；修改默认的1位3； 点击右下角的 Create 按钮  观察测试结果 进入Application，点击右侧第三个图标；点击Manager，点击Create的右侧的眼睛的按钮。查看整个部署的过程。点击 Services Tab；观察已经创建的三个虚拟机的IP地址。
+进入Explore-&amp;gt; VM 在搜索栏输入 xyz 按回车，应该能看到以下三个虚拟机；
+点击其中的一个vm
+点击这个vm上面的console</description>
+    </item>
+    
+    <item>
+      <title>配置服务目录</title>
+      <link>/02-nucalm-basic/03-config-cat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02-nucalm-basic/03-config-cat/</guid>
+      <description>服务目录是为SSP用户提供的最基础的资源服务，下面是配置SSP用户可以访问到的ISO和磁盘镜像模板的方法。
+以SSP管理员用户身份登录。
+点击左侧的 Images ， 在镜像管理页面里，选择 Add Images 按钮，上传可以用于SSP的ISO和Disk镜像。选中其中需要通过服务目录展示给最终用户的镜像。 配置镜像在服务目录中看到的名字和描述。
+点击右侧的 Catalog Items 参考最后发布的效果。
+退出Admin用户，换SSP用户登录。下面是Developer用户角色能看到的内容。
+以上步骤的验收标准： 服务目录里的镜像可以供给SSP用户创建虚拟机。 </description>
+    </item>
+    
+    <item>
+      <title>LAMP技术堆栈蓝图</title>
+      <link>/03-nucalm-middle/04-lamp-bp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/03-nucalm-middle/04-lamp-bp/</guid>
+      <description>这个lab的目标：
+ 蓝图使用上面的CentOS7的模板镜像 创建数据库、app、LB服务 设置服务的各种安装包 设置用于应用部署的变量参数  参考蓝图 可以在GitHub下载本文示例蓝图文件，网址：https://github.com/Nutanix-lab/calm，蓝图文件名：LAMP_colo.json。 下面是这个蓝图的关键配置讲解。
+下载上传本蓝图的步骤省略，参考本章前两篇文章。
+蓝图中的重点配置 设置量变量参数，用于参数化这个LAMP模板 * 配置MySQL数据库密码 * 变量 DEMO_COMP 用于初始化 Apache的默认首页的内容，扩展开去，你也可以设置为在Apache/Php服务器上部署的应用的代码的参数，如：下载网址等，这样就可以让这个蓝图自动化的部署目标运行的应用代码。
+ 数据库服务器的基础模板选择 martin-centos-t1 这里设定的是不可变 其它的虚拟机规格参数配置如EC2 Demo蓝图，参考上文。   这段脚本是数据库服务的数据安装命令 使用了应用级别的变量初始化MySQL数据库root口令   这段脚本是Apache服务的安装命令 使用了应用级别的变量初始化网站首页的内容，本例中及用于演示的目的 真实场景中，可以是一段动态的拉取应用代码吧的脚本，参数可以是应用的名称、版本和位置等。   Apache服务器在LB负载均衡器的后面，默认两个副本 副本数在部署的时候可选  蓝图的代码 数据库 #!/bin/bash set -ex # -*- Mysql installation #sudo yum install -y &amp;quot;http://repo.mysql.com/mysql-community-release-el7.rpm&amp;quot; sudo yum update -y sudo yum install -y mariadb-server mariadb sudo systemctl start mariadb sudo systemctl enable mariadb # -*- Mysql secure installation mysql -u root&amp;lt;&amp;lt;-EOF UPDATE mysql.</description>
+    </item>
+    
+    <item>
+      <title>创建虚拟机模板</title>
+      <link>/02-nucalm-basic/04-create-template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02-nucalm-basic/04-create-template/</guid>
+      <description>通过ISO光盘安装虚拟机 这个步骤是为测试Calm的蓝图做准备，安装一个CentOS 7 的虚拟机，并且把它转化成模板镜像。
+点击 Create VM 按钮，创建一个虚拟机。
+点击 Next 下面输入磁盘信息和CPU内存的配置信息。点 Save 按钮。 进入新创建虚拟机的控制台。
+在安装完的模板虚拟机里运行一下命令，方便后面的蓝图测试，把这些包装好，后面能更快速一些。
+yum install httpd mariadb-server mariadb php php-mysql php-gd nano wget bind-utils net-tools reboot  编辑 /etc/ssh/sshd_config 文件， 取消这一行的注释： PasswordAuthentication yes
+再次登录以后用 sys-unconfig 关机。 以下文档内容参考了 http://lab.digitalformula.net/；
+将测虚拟机磁盘转成模板镜像 ssh登录到AHV Cluster中的一个CVM。登录后执行acli命令，然后输入一下命令
+&amp;lt;acropolis&amp;gt; vm.get centos-tmp include_vmdisk_paths=1 centos-tmp { config { allow_live_migrate: True disk_list { addr { bus: &amp;quot;ide&amp;quot; index: 0 } cdrom: True device_uuid: &amp;quot;1fd10d29-0ac1-425d-99cc-ecffd6593fb2&amp;quot; empty: True } disk_list { addr { bus: &amp;quot;scsi&amp;quot; index: 0 } container_id: 418 container_uuid: &amp;quot;08e01b3e-1bfa-45e0-ba11-5155380e0b1f&amp;quot; device_uuid: &amp;quot;afe6d35e-97a1-4f16-976a-87fd4c702c2e&amp;quot; vmdisk_nfs_path: &amp;quot;/SelfServiceContainer/.</description>
     </item>
     
     <item>
@@ -106,7 +157,7 @@ Special syntax (in html comment) is available for adding attributes to Markdown 
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
       <guid>/_footer/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+      <description>页脚说明</description>
     </item>
     
     <item>
@@ -115,7 +166,7 @@ Special syntax (in html comment) is available for adding attributes to Markdown 
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
       <guid>/_header/</guid>
-      <description>DocDock Documentation</description>
+      <description></description>
     </item>
     
     <item>
@@ -124,186 +175,48 @@ Special syntax (in html comment) is available for adding attributes to Markdown 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/credits/</guid>
-      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @vjeantet 225 commits   @matcornic 49 commits   @W-Floyd 24 commits   @gwleclerc 21 commits   @lierdakil 16 commits   @Pilskalns 12 commits   @SiamKreative 6 commits   @jose-oc 6 commits   @Xipas 5 commits   @altinnadmin 4 commits   @FMuro 2 commits   @Thiht 2 commits   @EnigmaCurry 2 commits   @adamlamar 1 commits   @byzheng 1 commits   @zivbk1 1 commits   @vielmetti 1 commits   @erikjasiak 1 commits   @giuliov 1 commits   @farmergreg 1 commits   @tarpdalton 1 commits   @JohnBlood 1 commits   @kamilchm 1 commits   @ripienaar 1 commits   @shazic 1 commits   @viertaxa 1 commits   @uweschaefer 1 commits   @justin-yan 1 commits   @karlmacklin 1 commits   @petzi53 1 commits   @remi31000 1 commits   @xxxtonixxx 1 commits   Other contributors  @bep supports and advices   Packages and libraries  Bootstrap - front-end framework mermaid - generation of diagram and flowchart from text in a similar manner as markdown font awesome - the iconic font and CSS framework jQuery - The Write Less, Do More, JavaScript Library lunr - Lunr enables you to provide a great search experience without the need for external, server-side, search services&amp;hellip; JavaScript-autoComplete - An extremely lightweight and powerful vanilla JavaScript completion suggester.</description>
+      <description>Github contributors *</description>
     </item>
     
     <item>
-      <title>Disable features</title>
-      <link>/content-organisation/customize-style/disable/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/content-organisation/customize-style/disable/</guid>
-      <description> You can disable feature in docdock by changing some params in config.toml
-hide Next / Prev Chevrons [params] disableNavChevron = true  hide Search box in side menu [params] disableSearch = true  hide the  icon in side bar [params] disableHomeIcon = true  </description>
-    </item>
-    
-    <item>
-      <title>Docdock-built Sites</title>
+      <title>Nutanix技术粉丝的展示厅</title>
       <link>/showcase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/showcase/</guid>
-      <description> https://invincible.site/ by @shazic https://bitfan.io/ by @vjeantet </description>
+      <description> 提交您的网站链接给我，发邮件到 martin.liu@nutanix.com
+https://invincible.site/ 这是里应该是你的名字和网址链接 @shazic https://bitfan.io/ 这是里应该是你的名字和网址链接@vjeantet </description>
     </item>
     
     <item>
-      <title>Theme styles</title>
-      <link>/content-organisation/customize-style/themestyle/</link>
+      <title>部署Prism Central</title>
+      <link>/01-prism-central/00-deploy-pc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/content-organisation/customize-style/themestyle/</guid>
-      <description> In site configuration file, you can set a subtheme name of this theme to load a specific css.
-add a param themeStyle = &amp;quot;STYLE_NAME&amp;quot; in the [params] part of config.toml file.
-Style &amp;ldquo;original&amp;rdquo; [params] themeStyle = &amp;quot;original&amp;quot;  Style &amp;ldquo;flex&amp;rdquo; (work in progress) [params] themeStyle = &amp;quot;flex&amp;quot;  </description>
+      <guid>/01-prism-central/00-deploy-pc/</guid>
+      <description>在AHV群集的管理界面PE里，点击左上角的第一个方格里的链接 “Register or create new”，在弹出的界面里，点击界面下部的上传安装包的选项，选择如下的两个文件，上传的界面如下所示。
+上传的文件为：
+ 5.5-prism_central.tar 5.5-prism_central_metadata.json  上传完毕之后点击安装按钮
+输入PC虚拟机的相关信息，如下图所示：
+注意可以勾选最下面的那个选项，把PC安装配置好之后一次性的把当前所操作的PE也一次性注册到PC中。 点击上图的部署按钮之后，大约需要半个小时的时间完成整个安装配置过程。
+在部署和配置PC的过程中，可以监控以下这两个任务的进度。
+安装部署完毕之后，在PE的界面中就可以看到PC的状态为OK。点击Launch链接。进入PC的登录界面，默认的用户名和密码是 admin / Nutanix/4u
+以上步骤的验收标准： 使用PC的默认用户名和密码成功登陆新安装的PC。 </description>
     </item>
     
     <item>
-      <title>Theme variants</title>
-      <link>/content-organisation/customize-style/theme-variants/</link>
+      <title>配置Prism Central</title>
+      <link>/01-prism-central/01-configure-pc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/content-organisation/customize-style/theme-variants/</guid>
-      <description> In site configuration file, you can set a variant name of this theme to load a specific css, with different color specifications.
-add a param themeVariant = &amp;quot;VARIANT_NAME&amp;quot; in the [params] part of config.toml file.
-Available variants change only colors at this moment Variant &amp;ldquo;gray&amp;rdquo; [params] themeVariant = &amp;quot;gray&amp;quot;  Variant &amp;ldquo;gold&amp;rdquo; [params] themeVariant = &amp;quot;gold&amp;quot;  Variant &amp;ldquo;green&amp;rdquo; [params] themeVariant = &amp;quot;green&amp;quot;`  </description>
-    </item>
-    
-    <item>
-      <title>alert</title>
-      <link>/shortcodes/alert/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/alert/</guid>
-      <description>The alert shortcode allow you to highlight information in your page. They create a colored box surrounding your text, like this:
-This is an alert ! Usage    Parameter Default Description     theme info success, info,warning,danger    Tips : setting only the theme as argument works too : {{%alert warning%}} instead of {{%alert theme=&amp;quot;warning&amp;quot;%}}
- Basic examples {{% alert theme=&amp;quot;info&amp;quot; %}}**this** is a text{{% /alert %}} {{% alert theme=&amp;quot;success&amp;quot; %}}**Yeahhh !</description>
-    </item>
-    
-    <item>
-      <title>attachments</title>
-      <link>/shortcodes/attachments/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/attachments/</guid>
-      <description>The Attachments shortcode displays a list of files attached to a page. Example :   Attachments   BachGavotteShort.mp3  (357 kB)   Carroll_AliceAuPaysDesMerveilles.pdf  (175 kB)   adivorciarsetoca00cape.pdf  (361 kB)   hugo.png  (17 kB)   movieselectricsheep-flock-244-32500-2.mp4  (340 kB)    Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages
- If your page is a markdown file, attachements must be place in a folder named like your page and ending with .</description>
-    </item>
-    
-    <item>
-      <title>button</title>
-      <link>/shortcodes/button/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/button/</guid>
-      <description>Display an actionable button in your page.
- This is a warning button   Usage    Parameter Default Description     href &amp;rdquo;&amp;rdquo; The location href to link to   align &amp;ldquo;center&amp;rdquo; horizontal align button on page   theme primary default, primary , success,info,warning,danger    The inner text you place in short code will be displayed as the button text</description>
-    </item>
-    
-    <item>
-      <title>excerpt</title>
-      <link>/shortcodes/excerpt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/excerpt/</guid>
-      <description>The Excerpt shortcode is used to mark a part of a page&amp;rsquo;s content for re-use. Defining an excerpt enables other shortcodes, such as the excerpt-include shortcode, to display the marked content elsewhere.
-You can only define one excerpt per page. In other words, you can only add the Excerpt shortcode once to a page. Usage    Parameter Default Description     hidden &amp;ldquo;false&amp;rdquo; Controls whether the page content contained in the Excerpt shortcode placeholder is displayed on the page.</description>
-    </item>
-    
-    <item>
-      <title>excerpt-include</title>
-      <link>/shortcodes/excerpt-include/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/excerpt-include/</guid>
-      <description>The Excerpt Include shortcode is used to display &amp;lsquo;excerpted&amp;rsquo; (that is, a segment of) content from one page in another. Before you can use this shortcode, the excerpt must have been defined using the Excerpt shortcode. Note that you can have more than one Excerpt Include shortcode on a page (although you can have only one Excerpt shortcode on a page). Usage    Parameter Default Description     filename required Type the filename of the page that contains the excerpt to be displayed.</description>
-    </item>
-    
-    <item>
-      <title>expand</title>
-      <link>/shortcodes/expand/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/expand/</guid>
-      <description>The Expand shortcode displays an expandable/collapsible section of text on your page. Here is an example
-  Expand me...   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description>
-    </item>
-    
-    <item>
-      <title>icon</title>
-      <link>/shortcodes/icon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/icon/</guid>
-      <description>Display an icon like   
-It uses :
- glyphicons library (bootstrap).more info here fontawesome library more info here  This icon shortcode will display an icon in your page.
-Usage    Parameter Default Description     name required name of icon (see bellow)   size none size of icon, medium, xx-small, x-small, small, large, x-large, xx-large, 11px, 2em, 20%&amp;hellip;.    Tips : setting only the name as argument works too : {{&amp;lt;icon film&amp;gt;}} instead of {{&amp;lt;icon name=&amp;quot;film&amp;quot;&amp;gt;}}</description>
-    </item>
-    
-    <item>
-      <title>mermaid</title>
-      <link>/shortcodes/mermaid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/mermaid/</guid>
-      <description>Flowchart example   Show code ...   {{&amp;lt;mermaid align=&amp;quot;left&amp;quot;&amp;gt;}} graph LR; A[Hard edge] --&amp;gt;|Link text| B(Round edge) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result one] C --&amp;gt;|Two| E[Result two] {{&amp;lt; /mermaid &amp;gt;}}    mermaid.initialize({startOnLoad:true}); graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two] 
-Sequence example   Show code ...   {{&amp;lt;mermaid&amp;gt;}} sequenceDiagram participant Alice participant Bob Alice-&amp;gt;&amp;gt;John: Hello John, how are you?</description>
-    </item>
-    
-    <item>
-      <title>notice</title>
-      <link>/shortcodes/notice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/notice/</guid>
-      <description>The notice shortcode shows 4 types of disclaimers to help you structure your page.
-Note {{% notice note %}} A notice disclaimer {{% /notice %}}  renders as
-A notice disclaimer
- Info {{% notice info %}} An information disclaimer {{% /notice %}}  renders as
-An information disclaimer
- Tip {{% notice tip %}} A tip disclaimer {{% /notice %}}  renders as
-A tip disclaimer
- Warning {{% notice warning %}} An warning disclaimer {{% /notice %}}  renders as</description>
-    </item>
-    
-    <item>
-      <title>page test</title>
-      <link>/shortcodes/children/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/children/test/</guid>
-      <description>This is a test demo child page</description>
-    </item>
-    
-    <item>
-      <title>page test 3</title>
-      <link>/shortcodes/children/children-2/test3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/children/children-2/test3/</guid>
-      <description>This is a test 3 demo child page</description>
-    </item>
-    
-    <item>
-      <title>panel</title>
-      <link>/shortcodes/panel/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/panel/</guid>
-      <description>The panel shortcode Allow you to highlight information or put it in a box. They create a colored box surrounding your text  Usage    Parameter Default Description     header none The title of the panel. If specified, this title will be displayed in its own header row.   footer none the footer of the panel. If specified, this text will be displayed in its own row   theme primary default,primary,info,success,warning,danger    Basic example By default :</description>
-    </item>
-    
-    <item>
-      <title>revealjs</title>
-      <link>/shortcodes/revealjs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/shortcodes/revealjs/</guid>
-      <description>This shortcode will format the enclosed markdow to render it with reveal.js at runtime (client-side)
-Read more on revealjs github repo.
-Usage revealjs can use the following named parameters :
- theme transition controls progress history center  Important Even if the enclosed content is a mardown, use &amp;lt; shortcode notation instead of the % notation  Content formating and slide delimiters read more on this here
-Demo  # In the morning ___ ## Getting up - Turn off alarm - Get out of bed ___ ## Breakfast - Eat eggs - Drink coffee --- # In the evening ___ ## Dinner - Eat spaghetti - Drink wine ___ ## Going to sleep - Get in bed - Count sheep       function initSlides() { Reveal.</description>
+      <guid>/01-prism-central/01-configure-pc/</guid>
+      <description>用新修改的admin密码登录之后，点击右上角的问号按钮。点击下面的Self Service &amp;amp; Apps链接，进入SSP的初始化配置界面。
+点击界面上的New Directory 按钮，配置和AD的集成。
+在配置页面里输入AD的项目信息，下面的AD的域名为zenlab.local；点击Next按钮。 进入SSP管理员配置页面，点击 Add Admins 按钮。
+在输入框里输入 ssp_a 即可自动搜索出之前创建的SSP管理员组。也可以使用已经由的AD用户和组，点击 Save。
+在网络配置里勾选默认群集中供SSP用户使用的网络。之后点击 Next 。
+在最后一个页面中勾选 Enable App Management ，点击 Finish 完成SSP的配置和App功能的启用。 以上配置的生效需要一个过程，大约需要十分钟左右的时间，可以在任务里观察这个任务的状态。
+以上步骤的验收标准： 上图中Enable App Management的100%成功完成。 </description>
     </item>
     
   </channel>

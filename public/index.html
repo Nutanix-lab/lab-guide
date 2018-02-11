@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Docdock</title>
+    <title>Nutanix实验室</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.29" />
 
-<title>DocDock Theme for Hugo :: Docdock</title>
+<title>Nutanix实验室 :: Nutanix实验室</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -15,6 +15,8 @@
 <link href="/css/featherlight.min.css" rel="stylesheet">
 <link href="/css/auto-complete.css" rel="stylesheet">
 <link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-green.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <script src="/js/jquery-2.x.min.js"></script>
@@ -24,14 +26,13 @@
   }
 </style>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-79101-13', 'auto');
-  ga('send', 'pageview');
-
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?50c3a9ae6c51222b31df5510bbca479f";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
 </script>
     
   </head>
@@ -48,14 +49,14 @@
       
 	
   
-    <p>DocDock Documentation</p>
+    <p><img src="/nutanix.jpg" alt="Nutanix Calm" /></p>
 
   
 
     </div>
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
-		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <input data-search-input id="search-by" type="text" placeholder="">
 		    <span data-search-clear=""><i class="fa fa-close"></i></span>
 		</div>
 		<script type="text/javascript" src="/js/lunr.min.js"></script>
@@ -72,224 +73,84 @@
             <li data-nav-id="/" class="dd-item">
             <a href="/"><i class="fa fa-fw fa-home"></i></a>
             </li>
-    <li data-nav-id="/getting-start/" class="dd-item alwaysopen">
-      <a href="/getting-start/">
-        <span>Getting started</span>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+    <li data-nav-id="/00-getting-start/" class="dd-item">
+      <a href="/00-getting-start/">
+        <span>基本配置</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/getting-start/installation/" class="dd-item">
-        <a href="/getting-start/installation/">
-          <span>Installation</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/00-getting-start/installation/" class="dd-item">
+        <a href="/00-getting-start/installation/">
+          <span>安装AHV群集</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/getting-start/configuration/" class="dd-item">
-        <a href="/getting-start/configuration/">
-          <span>Configuration</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/00-getting-start/configuration/" class="dd-item">
+        <a href="/00-getting-start/configuration/">
+          <span>配置和部署AD</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
     </li>
-    <li data-nav-id="/create-page/" class="dd-item">
-      <a href="/create-page/">
-        <span><i class='fa fa-edit'></i> Create Page</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+    <li data-nav-id="/01-prism-central/" class="dd-item">
+      <a href="/01-prism-central/">
+        <span>Prism Central</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/create-page/homepage/" class="dd-item">
-        <a href="/create-page/homepage/">
-          <span>Home page</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/01-prism-central/00-deploy-pc/" class="dd-item">
+        <a href="/01-prism-central/00-deploy-pc/">
+          <span>部署Prism Central</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/create-page/page-images/" class="dd-item">
-        <a href="/create-page/page-images/">
-          <span>About images</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/create-page/page-slide/" class="dd-item">
-        <a href="/create-page/page-slide/">
-          <span>Present a Slide</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/01-prism-central/01-configure-pc/" class="dd-item">
+        <a href="/01-prism-central/01-configure-pc/">
+          <span>配置Prism Central</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
     </li>
-    <li data-nav-id="/content-organisation/" class="dd-item">
-      <a href="/content-organisation/">
-        <span>Content Organisation</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+    <li data-nav-id="/02-nucalm-basic/" class="dd-item">
+      <a href="/02-nucalm-basic/">
+        <span>Nutnaix Calm基础功能</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/content-organisation/logo/" class="dd-item">
-        <a href="/content-organisation/logo/">
-          <span>Logo placeholder</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/02-nucalm-basic/01-configure-calm/" class="dd-item">
+        <a href="/02-nucalm-basic/01-configure-calm/">
+          <span>初始化配置Calm</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/content-organisation/extramenu/" class="dd-item">
-        <a href="/content-organisation/extramenu/">
-          <span>Extra menu entries</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/02-nucalm-basic/02-deploy-bp/" class="dd-item">
+        <a href="/02-nucalm-basic/02-deploy-bp/">
+          <span>导入Nutanix Calm商店里的蓝图</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-    <li data-nav-id="/content-organisation/customize-style/" class="dd-item">
-      <a href="/content-organisation/customize-style/">
-        <span>Customize website look and feel</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-      <li data-nav-id="/content-organisation/customize-style/disable/" class="dd-item">
-        <a href="/content-organisation/customize-style/disable/">
-          <span>Disable features</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/02-nucalm-basic/03-config-cat/" class="dd-item">
+        <a href="/02-nucalm-basic/03-config-cat/">
+          <span>配置服务目录</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/content-organisation/customize-style/themestyle/" class="dd-item">
-        <a href="/content-organisation/customize-style/themestyle/">
-          <span>Theme styles</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/content-organisation/customize-style/theme-variants/" class="dd-item">
-        <a href="/content-organisation/customize-style/theme-variants/">
-          <span>Theme variants</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/02-nucalm-basic/04-create-template/" class="dd-item">
+        <a href="/02-nucalm-basic/04-create-template/">
+          <span>创建虚拟机模板</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
     </li>
-        </ul>
-    </li>
-    <li data-nav-id="/shortcodes/" class="dd-item">
-      <a href="/shortcodes/">
-        <span>Shortcodes</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+    <li data-nav-id="/03-nucalm-middle/" class="dd-item">
+      <a href="/03-nucalm-middle/">
+        <span>Nutnaix Calm中级功能</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/shortcodes/alert/" class="dd-item">
-        <a href="/shortcodes/alert/">
-          <span>alert</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/attachments/" class="dd-item">
-        <a href="/shortcodes/attachments/">
-          <span>attachments</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/button/" class="dd-item">
-        <a href="/shortcodes/button/">
-          <span>button</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-    <li data-nav-id="/shortcodes/children/" class="dd-item">
-      <a href="/shortcodes/children/">
-        <span>children</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-    <li data-nav-id="/shortcodes/children/children-1/" class="dd-item">
-      <a href="/shortcodes/children/children-1/">
-        <span>page 1</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-    <li data-nav-id="/shortcodes/children/children-1/children-1-1/" class="dd-item">
-      <a href="/shortcodes/children/children-1/children-1-1/">
-        <span>page 1-1</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/" class="dd-item">
-      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/">
-        <span>page 1-1-1</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/" class="dd-item">
-      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/">
-        <span>page 1-1-1-1</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-    <li data-nav-id="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/" class="dd-item">
-      <a href="/shortcodes/children/children-1/children-1-1/children-1-1-1/children-1-1-1-1/children-1-1-1-1-1/">
-        <span>page 1-1-1-1-1</span><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-    </li>
         </ul>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/shortcodes/children/children-2/" class="dd-item">
-      <a href="/shortcodes/children/children-2/">
-        <span>page 2</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-        <ul>
-      <li data-nav-id="/shortcodes/children/children-2/test3/" class="dd-item">
-        <a href="/shortcodes/children/children-2/test3/">
-          <span>page test 3</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/shortcodes/children/children-3/" class="dd-item">
-      <a href="/shortcodes/children/children-3/">
-        <span>page 3</span><i class="fa fa-circle-thin read-icon"></i>
-      </a>
-    </li>
-      <li data-nav-id="/shortcodes/children/test/" class="dd-item">
-        <a href="/shortcodes/children/test/">
-          <span>page test</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-      <li data-nav-id="/shortcodes/excerpt/" class="dd-item">
-        <a href="/shortcodes/excerpt/">
-          <span>excerpt</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/excerpt-include/" class="dd-item">
-        <a href="/shortcodes/excerpt-include/">
-          <span>excerpt-include</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/expand/" class="dd-item">
-        <a href="/shortcodes/expand/">
-          <span>expand</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/icon/" class="dd-item">
-        <a href="/shortcodes/icon/">
-          <span>icon</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/mermaid/" class="dd-item">
-        <a href="/shortcodes/mermaid/">
-          <span>mermaid</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/notice/" class="dd-item">
-        <a href="/shortcodes/notice/">
-          <span>notice</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/panel/" class="dd-item">
-        <a href="/shortcodes/panel/">
-          <span>panel</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/shortcodes/revealjs/" class="dd-item">
-        <a href="/shortcodes/revealjs/">
-          <span>revealjs</span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/search/" class="dd-item">
-      <a href="/search/">
-        <span>About the Search Engine</span><i class="fa fa-circle-thin read-icon"></i>
-      </a>
     </li>
 
 
 
         <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
-                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i> Showcases</a></li>
-                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Documentation</a></li>
+                <li class="" role=""><h3>更多</h3><a href="https://github.com/Nutanix-lab/lab-guide" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github代码库</a></li>
+                <li class="" role=""><a href="/showcase" target="_blank" rel="noopener"><i class='fa fa-camera'></i>友情链接</a></li>
+                <li class="" role=""><a href="http://nutnaix.martinliu.cn/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Nutanix实验室</a></li>
                 <li class="" role=""><a href="/credits" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> Credits</a></li>
         </section>
-            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> </a>
 
     <hr />
     <li></li>
@@ -298,13 +159,13 @@
 
  <section id="footer"><center>
 
-<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docdock on GitHub">Download</a>
+<a class="github-button" href="https://github.com/Nutanix-lab/lab-guide/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Nutanix Lab docs on GitHub">Download</a>
 
 
-<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docdock on GitHub">Star</a>
+<a class="github-button" href="https://github.com/Nutanix-lab/lab-guide" data-icon="octicon-star" data-show-count="false" aria-label="Star Nutanix Lab Docs on GitHub">Star</a>
 
 
-<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docdock on GitHub">Fork</a>
+<a class="github-button" href="https://github.com/Nutanix-lab/lab-guide/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Nutanix Lab Docs on GitHub">Fork</a>
 
 </center>
 
@@ -334,77 +195,76 @@
  
 
 
-<h1 id="hugo-docdock-theme">Hugo docDock theme</h1>
+<h1 id="nutanix实验室">Nutanix实验室</h1>
 
-<p><a href="https://github.com/vjeantet/hugo-theme-docdock">Hugo-theme-docdock 
+<p><img src="/media/15142875527032/WechatIMG224.jpeg" alt="Nutanix Calm" /></p>
 
-<span class="fa fa-github" aria-hidden="true"></span>
-
-</a> is a theme for Hugo, a fast and modern static website engine written in Go. Hugo is often used for blogs, <strong>this theme is fully designed for documentation.</strong></p>
-
-<p>This theme is a partial porting of the <a href="https://github.com/matcornic/hugo-theme-learn">Learn theme of matcornic 
-
-<span class="fa fa-github" aria-hidden="true"></span>
-
-</a>.</p>
-
-<div class="panel panel-primary">
-	
-	<div class="panel-body">docDock works with a &ldquo;page tree structure&rdquo; to organize content : All contents are pages, which belong to other pages. <a href="/content-organisation/">read more about this</a></div>
-	
-</div>
-
-
-<h2 id="main-features">Main features</h2>
+<p>本站点包含了Nutnaix Calm的一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。</p>
 
 <ul>
-<li><a href="/search/">Search</a></li>
-<li><strong>Unlimited menu levels</strong></li>
-<li><a href="/create-page/page-slide/">Generate RevealJS presentation</a> from markdown (embededed or fullscreen page)</li>
-<li>Automatic next/prev buttons to navigate through menu entries</li>
-<li><a href="/create-page/page-images/">Image resizing, shadow&hellip;</a></li>
-<li><a href="/shortcodes/attachments/">Attachments files</a></li>
-<li><a href="/shortcodes/children/">List child pages</a></li>
-<li><a href="/shortcodes/excerpt/">Excerpt</a> ! Include segment of content from one page in another</li>
-<li><a href="/shortcodes/mermaid/">Mermaid diagram</a> (flowchart, sequence, gantt)</li>
-<li><a href="/shortcodes/icon/">Icons</a>, <a href="/shortcodes/button/">Buttons</a>, <a href="/shortcodes/alert/">Alerts</a>, <a href="/shortcodes/panel/">Panels</a>, <a href="/shortcodes/notice/">Tip/Note/Info/Warning boxes</a>, <a href="/shortcodes/expand/">Expand</a></li>
-<li><a href="/content-organisation/customize-style/">customizable look and feel</a>, <a href="/content-organisation/customize-style/themestyle/">theme style</a>, <a href="/content-organisation/customize-style/theme-variants/">theme variants</a></li>
+<li><a href="https://portal.nutanix.com//">Nutanix全球用户支持门户 
+
+<span class="fa fa-bookmark" aria-hidden="true"></span>
+
+</a></li>
+<li><a href="http://nutanixbible.com/">Nutanix圣经</a></li>
+<li>Nutanix中国官方微信公众号 ： Nutnaix-China</li>
 </ul>
 
-<p>Style &ldquo;Original&rdquo;</p>
+<h2 id="变更日志">变更日志</h2>
 
-<p><img src="https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?width=33pc&amp;classes=border,shadow" alt="" /></p>
+<ul>
+<li>2018-1-22：增加了EC2服务高仿蓝图和LAMP堆栈自定义应用部署蓝图。</li>
+</ul>
 
-<p>Style &ldquo;Flex&rdquo;</p>
+<h2 id="calm-简介">Calm 简介</h2>
 
-<p><img src="style-flexfull.png?width=33pc&amp;classes=border,shadow" alt="" /></p>
+<p>IT团队一直想方设法地整体提升IT的敏捷性，从而加速创新的步伐。然而，应用的开发和交付也在变得日益复杂，这使敏捷性更具有挑战性。部门墙增加了跨专业技术沟通的成本，削弱了实现业务价值的能力。</p>
 
-<h2 id="contribute-to-this-documentation">Contribute to this documentation</h2>
+<p>Calm提供企业级应用编排，变革了IT团队管理应用和支持业务的工作模式。完全整合在Nutanix管理平台中的Calm，可以提供一个强大的通用型应用交付框架。不同的IT团队可以同时在这个平台上协作，进行快速的应用部署和持续交付。</p>
 
-<p>Feel free to update this content, just click the <strong>Edit this page</strong> link displayed on top right of each page, and pullrequest it
+<p>Calm将应用看做是一个整体来管理，而不仅是一些虚拟机，实现了应用的自动化创建、消费和访问控制。Calm能统一管理私有云和公有云等环境，实现了简洁的、可重复的应用自动化管理。</p>
+
+<p>如上图所示，Calm包含在Prism管理控制平面中，基于Prism中简洁高效的一键式运维，它协助企业从虚拟化资源池的运维，提升到以业务为中心的自动化应用运维。</p>
+
+<p>下图是Calm的可视化应用蓝图编辑器，它的主要功能如下所示：</p>
+
+<p><img src="/media/blueprint.png" alt="Nutanix Calm blueprint" /></p>
+
+<ul>
+<li><p><strong>应用生命周期管理</strong>：利用预定义的应用蓝图，全面地实现了传统型多层应用和流行的分布式服务的自动化运维，包括系统制备、扩缩容和资源释放等操作。应用蓝图将极大地简化了私有云和公有云的应用管理和运维。</p></li>
+
+<li><p><strong>应用蓝图管理</strong>：将应用系统的所有组成部分（包括相关的虚拟机、配置和可执行程序）融入到了一个可视化的、操作直观的蓝图里，从而简化了企业应用的配置管理和日常运维。应用蓝图提升了基础架构团队的管理效率。IT团队再也不用像以前那样，在应用管理的日常工作上花费大量时间。</p></li>
+
+<li><p><strong>Nutanix应用市场</strong>：应用蓝图可以在Nutanix 应用市场（Marketplace）里把应用直接发布给最终用户，使产品经理和开发人员能够持续交付产品，快速地供给应用，及时地满足IT服务请求。</p></li>
+
+<li><p><strong>应用治理</strong>：Calm基于角色的访问控制机制可以限制用户的操作权限。此外，系统会集中地记录所有操作活动和变更，可以实现端到端的可追溯性，这些信息可以提供给安全团队，用来配合相关合规审核工作。</p></li>
+
+<li><p><strong>混合云管理</strong>：能在混合云的架构里，自动化地制备应用，包括AWS公有云环境，能实现多层应用和分布式应用的弹性扩缩容。Calm能全局统计资源用量，让您对公有云的实际消费成本一目了然，方便您按照业需求和预算做出合理的决策。</p></li>
+</ul>
+
+<h2 id="术语">术语</h2>
+
+<p>本网站里所使用的术语和缩略语：</p>
+
+<ul>
+<li>PC ： Prisum Central</li>
+<li>PE ： Prisum Element</li>
+</ul>
+
+<h2 id="向本网站投稿">向本网站投稿</h2>
+
+<p>欢迎投稿关于Nutnaix产品的技术文章。</p>
+
 <div class="alert 
 	alert-info"
  
-role="alert">Your modification will be deployed automatically when merged.</div>
-</p>
+role="alert">请发邮件到： martin.liu@nutanix.com</div>
 
-<h2 id="documentation-website">Documentation website</h2>
 
-<p>This current documentation has been statically generated with Hugo with a simple command : <code>hugo -t docdock</code> &ndash; source code is <a href="https://github.com/vjeantet/hugo-theme-docDock">available here at GitHub 
+<h2 id="本网站的web站点">本网站的Web站点</h2>
 
-<span class="fa fa-github" aria-hidden="true"></span>
-
-</a></p>
-
-<div class="panel panel-success">
-	<div class="panel-heading">Automated deployments</div>
-	<div class="panel-body"><p>Automatically published and hosted thanks to <a href="https://www.netlify.com/">Netlify</a>.</p>
-
-<p>Read more about <a href="https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/">Automated HUGO deployments with Netlify</a></p>
-</div>
-	<div class="panel-footer">Netlify builds, deploys, and hosts  frontends.</div>
-</div>
-
+<p>这个站点使用了Hugo静态网站生成器加DocDock模板。所有源代码在<a href="https://github.com/Nutanix-lab/lab-guide">Nutanix-lab/lab-guide </a> ；你可以下载到本地并参与修订。</p>
 
 
 
@@ -418,7 +278,7 @@ role="alert">Your modification will be deployed automatically when merged.</div>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/getting-start/" title="Getting started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-next" href="/00-getting-start/" title="基本配置" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

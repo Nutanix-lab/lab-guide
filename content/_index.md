@@ -1,55 +1,67 @@
 +++
 title = "Nutanix实验室"
-description = ""
+description = "技术文档和操作手册"
 date = "2017-04-24T18:36:24+02:00"
 
 +++
 
-# 简介
-[Nutanix-lab/lab-guide {{%icon fa-github%}}](https://github.com/Nutanix-lab/lab-guide) 代码仓库是本站的文档源码，里面包含了一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。, **这是一个免费开放的平台，我们欢迎任何人提交你的使用技巧和心得等文章。**
+# Nutanix实验室 
 
-其它相关的站点包括，Nutanix官方的Github账号[Nutanix {{%icon fa-github%}}](https://github.com/Nutanix/)；[Nutanix全球用户支持门户 {{%icon fa-bookmark%}}](https://portal.nutanix.com//)
+![Nutanix Calm](/media/15142875527032/WechatIMG224.jpeg)
 
- {{%panel%}}
- * Nutanix中国官方微信公众号 ： Nutnaix-China
- * IT锐观察： CHINAEUC
+本站点包含了Nutnaix Calm的一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。
+
+ * [Nutanix全球用户支持门户 {{%icon fa-bookmark%}}](https://portal.nutanix.com//)
  * [Nutanix圣经](http://nutanixbible.com/)
-  {{%/panel%}}
+ * Nutanix中国官方微信公众号 ： Nutnaix-China
 
-## 主要内容 
+## 变更日志
+ 
+* 2018-1-22：增加了EC2服务高仿蓝图和LAMP堆栈自定义应用部署蓝图。
 
-* [Search]({{%relref "search/_index.md" %}})
-* **Unlimited menu levels**
-* [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* Automatic next/prev buttons to navigate through menu entries
-* [Image resizing, shadow...]({{%relref "create-page/page-images.md" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.md" %}})
-* [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Excerpt]({{%relref "shortcodes/excerpt.md"%}}) ! Include segment of content from one page in another
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.md" %}}) (flowchart, sequence, gantt)
-* [Icons]({{%relref "shortcodes/icon.md" %}}), [Buttons]({{%relref "shortcodes/button.md" %}}), [Alerts]({{%relref "shortcodes/alert.md" %}}), [Panels]({{%relref "shortcodes/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.md" %}}), [Expand]({{%relref "shortcodes/expand.md" %}})
-* [customizable look and feel]({{%relref "content-organisation/customize-style/_index.md"%}}), [theme style]({{%relref "content-organisation/customize-style/themestyle.md"%}}), [theme variants]({{%relref "content-organisation/customize-style/theme-variants.md"%}})
+## Calm 简介
+
+IT团队一直想方设法地整体提升IT的敏捷性，从而加速创新的步伐。然而，应用的开发和交付也在变得日益复杂，这使敏捷性更具有挑战性。部门墙增加了跨专业技术沟通的成本，削弱了实现业务价值的能力。
+
+Calm提供企业级应用编排，变革了IT团队管理应用和支持业务的工作模式。完全整合在Nutanix管理平台中的Calm，可以提供一个强大的通用型应用交付框架。不同的IT团队可以同时在这个平台上协作，进行快速的应用部署和持续交付。
+
+Calm将应用看做是一个整体来管理，而不仅是一些虚拟机，实现了应用的自动化创建、消费和访问控制。Calm能统一管理私有云和公有云等环境，实现了简洁的、可重复的应用自动化管理。
+
+如上图所示，Calm包含在Prism管理控制平面中，基于Prism中简洁高效的一键式运维，它协助企业从虚拟化资源池的运维，提升到以业务为中心的自动化应用运维。
+
+下图是Calm的可视化应用蓝图编辑器，它的主要功能如下所示： 
+
+![Nutanix Calm blueprint](/media/blueprint.png)
+ 
+
+* **应用生命周期管理**：利用预定义的应用蓝图，全面地实现了传统型多层应用和流行的分布式服务的自动化运维，包括系统制备、扩缩容和资源释放等操作。应用蓝图将极大地简化了私有云和公有云的应用管理和运维。
+
+* **应用蓝图管理**：将应用系统的所有组成部分（包括相关的虚拟机、配置和可执行程序）融入到了一个可视化的、操作直观的蓝图里，从而简化了企业应用的配置管理和日常运维。应用蓝图提升了基础架构团队的管理效率。IT团队再也不用像以前那样，在应用管理的日常工作上花费大量时间。
+
+* **Nutanix应用市场**：应用蓝图可以在Nutanix 应用市场（Marketplace）里把应用直接发布给最终用户，使产品经理和开发人员能够持续交付产品，快速地供给应用，及时地满足IT服务请求。
+
+* **应用治理**：Calm基于角色的访问控制机制可以限制用户的操作权限。此外，系统会集中地记录所有操作活动和变更，可以实现端到端的可追溯性，这些信息可以提供给安全团队，用来配合相关合规审核工作。
+
+* **混合云管理**：能在混合云的架构里，自动化地制备应用，包括AWS公有云环境，能实现多层应用和分布式应用的弹性扩缩容。Calm能全局统计资源用量，让您对公有云的实际消费成本一目了然，方便您按照业需求和预算做出合理的决策。
 
 
 
-Style "Original"
+## 术语
 
-![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?width=33pc&classes=border,shadow)
+本网站里所使用的术语和缩略语：
 
-Style "Flex"
-
-![](style-flexfull.png?width=33pc&classes=border,shadow)
-
-## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
-{{%alert%}}Your modification will be deployed automatically when merged.{{%/alert%}}
+* PC ： Prisum Central
+* PE ： Prisum Element
 
 
-## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t docdock` -- source code is [available here at GitHub {{%icon fa-github%}}](https://github.com/vjeantet/hugo-theme-docDock)
 
-{{% panel theme="success" header="Automated deployments" footer="Netlify builds, deploys, and hosts  frontends." %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/).
+## 向本网站投稿
 
-Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
-{{% /panel %}}
+欢迎投稿关于Nutnaix产品的技术文章。
+
+{{%alert%}} 请发邮件到： martin.liu@nutanix.com {{%/alert%}}
+
+## 本网站的Web站点
+
+这个站点使用了Hugo静态网站生成器加DocDock模板。所有源代码在[Nutanix-lab/lab-guide ](https://github.com/Nutanix-lab/lab-guide) ；你可以下载到本地并参与修订。
+
