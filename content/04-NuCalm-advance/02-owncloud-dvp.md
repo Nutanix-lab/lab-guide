@@ -1,36 +1,66 @@
 +++
-title = "一键安装Docker Swarm群集"
-description = "安装和部署Docker Swarm群集，包含高可用性等。"
-weight = 1
+title = "Docker Datacenter使用DVP持久存储"
+description = "安装和部署DDC，并使用DVP提供持久存储"
+weight = 2
 +++
 
-构建中....
+Docker宣布Docker Datacenter（简称DDC）正式发布，这套可集成的端到端平台设计用于高效地将应用程序开发和管理工作由内部数据中心迁移至云环境下。
 
-这个lab的目标：
+在Docker Datacenter的帮助下，企业将能够立足于内部或者虚拟私有云环境实现容器即服务（简称CaaS）的部署工作。CaaS能够提供一整套IT管理及安全应用的内容与基础设施环境，开发人员则以此为基础通过自助服务模式实现应用程序的构建与部署。
 
-1. 蓝图使用上面的CentOS7的模板镜像
-2. 在创建工作流里生成一个包含Hello World字符串的文件/helloworld.txt
-3. 这个蓝图可以生成自定义配置的n台虚拟机
-4. 运行这个蓝图生成3个虚拟机
-5. 使用Stop工作流，poweroff这三个虚拟机
-6. 使用Start工作流，poweron这三个虚拟机
-7. 使用Delete工作流删除这三个虚拟机实例
+Docker Datacenter当中包含一系列领先的Docker开源项目、商用软件并同大量经过验证并受到支持配置相集成：
+
+* Universal Control Plane (UCP) 1.0，嵌入Swarm以实现对Docker环境的管理与编排能力。
+* Trusted Registry (DTR) 1.4.3，用于实现Docker镜像管理、安全保护与协作。
+* Docker Engine 1.10对强大的container runtime提供商业支持。
 
 
-# 为Docker Swarm群集配置Nutanix持久存储
 
-本文介绍如何用Docker卷插件的方式，给Docker Swarm的群集挂载Nutanix存储。[Nutanix Container Volume Plug-in ](https://store.docker.com/plugins/nutanix-dvp-docker-volume-plug-in)简称DVP，可以给容器提供数据持久化的功能。
+
+本文介绍如何用Docker卷插件的方式，给Docker DDC的Swarm的群集挂载Nutanix存储。[Nutanix Container Volume Plug-in ](https://store.docker.com/plugins/nutanix-dvp-docker-volume-plug-in)简称DVP，可以给容器提供数据持久化的功能。
 
 本文使用ownCloud网盘应用做功能测试。测试的过程如下，安装部署Docker Datacenter，配置好群集，在UCP的界面里调用DVP插件建持久的数据卷，建立ownCloud服务，部署和测试该服务。
 
+这个lab的目标：
+
+1. 在CentOS7的模板镜像虚拟机里安装配置Nutanix DVP
+2. 部署和配置DDC，包括UCP，DTR和worker节点
+3. 在UCP里配置DVP持久存储
+4. 在DTR里上传OwnCloud镜像
+5. 在DDC的Docker Swarm集群里部署OwnCloud
+6. 测试OwnCloud的功能
+7. 对OwnCloud的容器做摧毁性测试，验证数据的持久性
 
 
 
-## Nutanix DVP (Docker Volume Plug-in)安装和配置
 
-这一部分描述DVP的安装部署过程，需要连接互联网；安装调试完毕之后，作虚拟机的镜像模板使用。这样Docker Swarm的其它节点也都不需要重复这个步骤了。
+## Docker服务的安装和配置
+
+这一部分描述DVP的安装部署过程，需要连接互联网；安装调试完毕之后，将虚拟机的制作成新的镜像模板待用。这样就能是DDC里的所有节点不重复配置DVP。
+
+先在模板虚拟机里安装Docker服务，[Docker服务的安装方法见Docker的官方文档。](https://docs.docker.com/install/linux/docker-ce/centos/)
+
+Docker安装的参考命令如下：
+
+```
+$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+  
+$ sudo yum install docker-ce
+
+$ sudo systemctl start docker
+
+$ sudo systemctl enable docker
+
+```
 
 本文使用的是Docker社区文档稳定版 17.03.1-ce ；本文使用的OS是CentOS 7.3。所Docker安装的版本如下：
+
 
 ```
 [root@centos7-temp]# docker version
@@ -167,6 +197,8 @@ repolist: 23,415
 
 到目前为止，Docker安装配置完成。
 
+## Nutanix DVP (Docker Volume Plug-in)安装和配置
+
 下面开始安装DVP，安装和配置过程参考页面。
 
 [https://store.docker.com/plugins/nutanix-dvp-docker-volume-plug-in](https://store.docker.com/plugins/nutanix-dvp-docker-volume-plug-in)
@@ -200,12 +232,14 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 > 解释一下DVP的工作原理是，它是让Docker主机通过iSCSI协议连接Nutanix的存储服务。DVP插件的配置里包含了连接存储服务和存储容器（这个容器是Nutanix的存储术语，非Docker说的容器）的相关信息。这样Docker主机上用该卷插件建立的数据卷都会指向Nutanix后台的存储容器中；数据通过iSCSI协议连接Nutanix存储服务的时候，就可以利用到Nutanix群集提供的负载均衡能力；当数据块写入Nutanix存储池的过程中和之后，就可以利用到到Nutanix存储容器所具备的其它重要特性：数据块2~3副本的高可靠性、冷热数据分成、压缩、去重、纠删码等；而且存储空间对于容器或者Docker Swarm里的服务都是透明和无限容量的。
 
-现在做一些安装DVP的准备工作，询问Nutanix系统管理员下面信息：
+现在做一些安装DVP的准备工作，向Nutanix系统管理员要求并记录下面的信息：
 
-* 获得Prism 的IP
+* 获得Prism的界面访问 IP
 * 获得Nutanix群集数据服务的IP，这个IP是群集上的虚拟服务IP
 * 获得群集的用户名和密码
 * 新建一个测试存储容器，获得容器名
+
+以上信息会使用在DVP的安装命令中，DVP的离线安装方法：下载DVP插件镜像，保存成文件，ssh上传到模板虚拟机，用docker load命令加载安装。
 
 参考下面的DVP安装命令：
 
@@ -242,7 +276,10 @@ ID                  NAME                DESCRIPTION                        ENABL
 f0e38fbc11b3        nutanix:latest      Nutanix volume plugin for docker   true
 ```
 
+关于 docker plugin 的相关命令参考文档，[见docker官网。](https://docs.docker.com/edge/engine/reference/commandline/plugin_install/)
+
 执行下面的测试，确认DVP工作正常。
+
 ```
 [root@centos7-temp]# docker volume create testvol -d nutanix:latest
 testvol
@@ -267,8 +304,9 @@ DRIVER              VOLUME NAME
 [root@centos7-temp]#
 ```
 
-在回到Prisum界面中查看刚才看到的那个卷应该就消失了。到此为止所有节点的DVP部署配置工作就完毕了，并且确认docker服务和DVP功能都很正常。用 sys-unconfig 命令关机，把这个虚拟机在Prisum里面做一个快照备用，也可以在Nutanix的acli命令行里面把它做成一个基础镜像。
+在回到Prisum界面中查看刚才看到的那个卷应该就消失了。到此为止所有节点的DVP部署配置工作就完毕了，并且确认docker服务和DVP功能都很正常。用 sys-unconfig 命令关机，把这个虚拟机在Prisum里面做一个快照备用，也可以在Nutanix的nucli命令行里面把它做成一个基础镜像。
 
+## 安装Docker For DaterCenter
 
 我们已经理解和熟悉了DVP的基本操作，配置和部署，下面开始安装Docker Datacenter；Docker Datacenter的架构图如下所示：
 ![](/media/14958993637032/14979754711332.jpg)
@@ -285,13 +323,15 @@ DRIVER              VOLUME NAME
 * 4GB RAM
 * 50GB Disk
 
-## 安装UCP（Docker Universal Control Plane）节点
+### 安装UCP（Docker Universal Control Plane）节点
 
 在Nutanix的Prisum中从刚才新建的四个虚拟机中选择一个，Power on开机；ssh登录到操作系统内之后，设定主机名和IP地址。
 
 安装配置参考文档：https://docs.docker.com/datacenter/ucp/2.1/guides/admin/install/install-offline/#download-the-offline-package
 
 注意事项，提前下载好安装包，这个tar包里面包含了UCP需要的所有镜像，可以一次性导入到UCP的节点上。
+
+下面是参考命令，在使用本文档时，请下载并安装最新版的Docker for Datacenter产品包。
 
 ```
 wget https://packages.docker.com/caas/ucp_images_2.1.4.tar.gz -O docker-datacenter.tar.gz
@@ -346,7 +386,7 @@ docker swarm join \
   
 把以上命令记录在写字板中备用。
 
-## 加3个节点到群集里  
+### 加3个节点到群集里  
 
 把剩下的三个虚拟机开机，进入操作系统后设定主机名和IP。其中的一个安装DTR（Docker镜像仓库）的节点建议使用固定IP。
 
@@ -357,12 +397,13 @@ docker swarm join \
 * systemctl status iscsid
 
 下面就可以把上一步所记录命令在命令行里面执行以下，完毕之后回到UCP的界面中查看是否它们已经添加成功。如下图所示：
+
 ![Screen Shot 2017-06-20 at 9.49.32 P](/media/14958993637032/Screen%20Shot%202017-06-20%20at%209.49.32%20PM.png)
 
 
 
 
-## 安装DTR-Docker镜像仓库
+### 安装DTR-Docker镜像仓库
 
 在UCP首页的下方，找到并点击 【Install DTR】的按钮，取得安装命令（记得从清单中选择固定IP地址的DTR主机）；在登录DTR主机的控制台里面输入这个命令，命令如下：
 
@@ -387,6 +428,7 @@ docker pull owncloud
 docker tag owncloud:latest dtr.zenlab.local/admin/owncloud:latest
 docker push dtr.zenlab.local/admin/owncloud:latest
 ```
+
 ![Screen Shot 2017-06-20 at 10.10.13 P](/media/14958993637032/Screen%20Shot%202017-06-20%20at%2010.10.13%20PM.png)
 
 
@@ -395,8 +437,10 @@ docker push dtr.zenlab.local/admin/owncloud:latest
 
 以上这个步骤主要是方便以后，反复使用和测试这个镜像的可能性，如果所有的节点都有高速的互联网链接，可以忽略以上步骤。
 
-## Docker Swarm群集中使用DVP
-这里使用UCP的图形化界面，在一个所有节点都配置和部署了VDP的群集上，给群集挂载外部Nutanix的数据卷。
+如果你所在的实验环境是没有互联网连接的，你需要将OwnCloud的镜像下载并保存成tar包，然后在传到DTR里，这样群集里的所有节点就可以在DTR里就近获得这个镜像，并启动OwnCloud容器了
+
+## 在Docker Datacenter群集中使用DVP
+这里使用UCP的图形化界面，在一个所有节点都配置和部署了VDP的群集上，给群集挂载外部Nutanix的数据卷。挂载的数据卷是给OwnCloud做持久存储用的。
 
 登录UCP主页，点击Resource，点击Volumes，点击 【Create Volume】，输入相关参数，如下图所示。图中的sizeMb=500000这个参数是制定VolumeGroup的大小，不设定这个参数的话，默认是10GB。
 ![Screen Shot 2017-06-21 at 12.22.24 A](/media/14958993637032/Screen%20Shot%202017-06-21%20at%2012.22.24%20AM.png)
@@ -407,6 +451,7 @@ docker push dtr.zenlab.local/admin/owncloud:latest
 
 
 ## 部署OwnCloud网盘服务
+
 
 登录UCP主页，点击 Service ， 点击 【Create a Service】按钮；开始建立这个服务。输入服务名，镜像名；点击 【Next】按钮。
 
@@ -432,7 +477,7 @@ docker push dtr.zenlab.local/admin/owncloud:latest
 
 输入管理员的用户名和密码，进入之后，上传一些图片，测试一下功能是否正常。
 
-![Screen Shot 2017-06-20 at 10.54.06 P](//media/14958993637032/Screen%20Shot%202017-06-20%20at%2010.54.06%20PM.png)
+![Screen Shot 2017-06-20 at 10.54.06 P](/media/14958993637032/Screen%20Shot%202017-06-20%20at%2010.54.06%20PM.png)
 
 
 尝试一些Docker Datacenter的高级功能，如服务的高可用性；同时Nutanix的DVP在底层保障了数据的持久性和完全性。测试步骤如下：
@@ -444,13 +489,9 @@ docker push dtr.zenlab.local/admin/owncloud:latest
 5. 查看和确认刚才上传的文件是否还在
 
 ## 总结
-Nutanix是一种融合和了计算、存储和虚拟化（内置KVM）的超融合平台。Nutanix DVP (Docker Volume Plug-in)可以让平台里的容器用上持久化存储服务。DVP不仅可以给单独虚拟机里的容器提供持久卷服务，还能给类似于Docker Swarm的其它容器编排平台提供持久化数据服务功能。我后续的文章还会分享路测试Kubernetes等其它平台。 
+Nutanix是一种融合和了计算、存储和虚拟化（内置KVM）的超融合平台。Nutanix DVP (Docker Volume Plug-in)可以让平台里的容器用上持久化存储服务。DVP不仅可以给单独虚拟机里的容器提供持久卷服务，还能给类似于Docker Swarm的其它容器编排平台提供持久化数据服务功能。
 
 
 
-
-
-
-
-{{% alert theme="warning" %}}**以上步骤的验收标准：** 可以登录用户蓝图生成的vm，能看到目标的文件。{{% /alert %}}
+{{% alert theme="warning" %}}**以上步骤的验收标准：** 可以在Nutanix上部署和运行Docker Datacenter，可以给Docker Datacenter的Swarm群集使用DVP持久存储，OwnCloud的网盘服务能高可用的存在和运行。{{% /alert %}}
 
