@@ -1,5 +1,5 @@
 +++
-title = "Nutnaix CE安装和使用"
+title = "Nutanix CE安装和使用"
 description = "Nutanix CE的安装和管理"
 weight = 60
 

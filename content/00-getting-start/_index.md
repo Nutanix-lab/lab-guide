@@ -1,6 +1,6 @@
 +++
 title = "基本配置"
-description = "Nutnaix Calm相关的基础配置"
+description = "Nutanix Calm相关的基础配置"
 weight = 1
 +++
 
