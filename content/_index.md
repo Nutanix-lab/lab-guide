@@ -9,7 +9,7 @@ date = "2017-04-24T18:36:24+02:00"
 
 ![Nutanix Calm](/media/15142875527032/WechatIMG224.jpeg)
 
-本站点包含了Nutnaix Calm的一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。
+本站点包含了Nutanix Calm的一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。
 
  * [Nutanix全球用户支持门户 {{%icon fa-bookmark%}}](https://portal.nutanix.com//)
  * [Nutanix圣经](http://nutanixbible.com/)
