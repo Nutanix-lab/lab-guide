@@ -17,12 +17,12 @@ weight = 10
 
 参考命令如下：
 
-`
+```
 timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp true
 ntpq -p
 
-`
+```
 
 
 
@@ -30,7 +30,7 @@ ntpq -p
 
 如果按照CE的机器内存很紧张，可以将CVM的内存降低，登陆到AHV的OS，参考命令如下：
 
-`
+```
 virsh shutdown  NTNX-7aa2dd30-A-CVM
 
 virsh setmaxmem  NTNX-7aa2dd30-A-CVM  10G --config
@@ -40,6 +40,6 @@ virsh setmem  NTNX-7aa2dd30-A-CVM 10G --config
 virsh start  NTNX-7aa2dd30-A-CVM
 
 virsh  dominfo NTNX-7aa2dd30-A-CVM
-`
+```
 
 
