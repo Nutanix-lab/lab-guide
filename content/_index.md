@@ -24,7 +24,7 @@ date = "2017-04-24T18:36:24+02:00"
 ## Gartner对HCI厂商的评测
 
 
-Nutanix是HCI超融合基础架构的创立者，也是一直以来这个细分市场的技术领先者。Garnter对HCI市场最新的分析报告显示如下：
+Nutanix是HCI超融合基础架构的创立者，一直以来也在这个细分市场的保持着技术领先者的地位。Garnter对HCI市场最新的分析报告显示如下：
 
 ![Gartner 2018 HCI](/ce/gartner-2018.jpg)
 
