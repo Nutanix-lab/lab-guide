@@ -74,7 +74,7 @@ weight = 2
 ### 新建一个虚拟机
 ![image009](/ce/image009.png)
 
-###设置虚拟机配置
+### 设置虚拟机配置
 
 ![image010](/ce/image010.png)
 ![image011](/ce/image011.png)
@@ -89,16 +89,18 @@ weight = 2
 ![image016](/ce/image016.png)
 ![image017](/ce/image017.png)
 
-###其它磁盘添加
+### 其它磁盘添加
+
  除了第一个安装引导盘以外，再添加两块磁盘，第二块盘作为热数据层，第三块盘作为冷数据层。
 ![image018](/ce/image018.png)
 
-###启动虚拟机-开始安装
+### 启动虚拟机-开始安装
 
 启动后，进行安装界面，安装方式跟之前物理环境中的过程一样。
 ![image019](/ce/image019.png)
 
 ## 访问Prism界面
+
 输入CVM的IP地址，使用admin/admin登录Prism，并修改密码
 ![image020](/ce/image020.png)
 
