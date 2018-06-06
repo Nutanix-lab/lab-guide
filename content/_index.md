@@ -7,33 +7,45 @@ date = "2017-04-24T18:36:24+02:00"
 
 # Nutanix实验室 
 
-![Nutanix Calm](/media/15142875527032/WechatIMG224.jpeg)
-
-本站点包含了Nutanix Calm的一部分产品操作指南，旨在帮助相关人员快速了解和掌握产品的使用方式。
-
  * [Nutanix全球用户支持门户 {{%icon fa-bookmark%}}](https://portal.nutanix.com//)
- * [Nutanix圣经](http://nutanixbible.com/)
- * Nutanix中国官方微信公众号 ： Nutanix-China
+ * [Nutanix圣经 {{%icon fa-book%}}](http://nutanixbible.com/)
+ * Nutanix中国官方微信公众号{{%icon fa-weixin%}} ： Nutanix-China 
 
-## 变更日志
- 
-* 2018-1-22：增加了EC2服务高仿蓝图和LAMP堆栈自定义应用部署蓝图。
-* 2018-2-11: 增加CE安装手册
-* 2018-5-24：增加了几条CE使用技巧
+本站点包含了Nutanix Calm和Nutanix CE等部分产品操作指南，旨在帮助任何想了解和使用Nutanix超融合技术的人，让他们能够利用自己现有的设备和网络，轻松地搭建超融合环境。
 
-## Gartner对HCI厂商的评测
+建议的安装Nutanix CE环境的服务器配置：
+
+* 2路Intel Xenon （10+核）服务器
+* 1块500+GB SSD硬盘
+* 2块2+TB SATA硬盘
+* 1块10GB 以太网卡
+* 384GB内存
+
+这样的四台服务器可以组成一个Nutanix超融合集群，推荐这样的原因如下：
+
+* 按1：6的CPU的整合比，该集群可以提供800个vCPU
+* 按2vCPU/4G RAM的规格计算，该集群可以运行超过350个这样的虚拟机
+* 磁盘裸空间容量为10T，初始化以后可用的存储空间为5TB，打开压缩、去重等功能以后，在使用的过程中，该系统或将能够提供10TB以上的可用存储空间
+* 可以满足150人左右的开发团队的资源需求，人家2个虚拟机。
 
 
-Nutanix是HCI超融合基础架构的创立者，一直以来也在这个细分市场的保持着技术领先者的地位。Garnter对HCI市场最新的分析报告显示如下：
 
 ![Gartner 2018 HCI](/ce/gartner-2018.jpg)
 
+上图是Gartner对HCI厂商的评测，Nutanix是HCI超融合基础架构的创立者，一直以来也在这个细分市场的保持着技术领先者的地位。Garnter对HCI市场最新的分析报告显示如下：
 
-主要的优势评价：
+Nutanix HCI主要的优势和评价：
 
 * “行业领先的创新和可扩展架构，极大地领先于几乎所有其他竞争对手。”
 * “Hypervisor选择方面的灵活性，基于KVM的AHV应用的比例逐渐提高，可以满足寻求比VMware ESXi更低成本的选择”
 * “已验证的用户认可度和很高的客户满意度，因此拥有很多大量节点数 (100+)的持续采购的全球大型企业。”
+
+Nutanix提供免费下载和安装的社区版软件，任何人都可以安装并体验Nutanix超融合技术。
+
+
+![Nutanix 管理平台框架](/media/15142875527032/WechatIMG224.jpeg)
+
+社区版软件中包含了上图中的Prism（管理控制平面）和Acropolis（虚拟化和数据平面）。使用社区版软件，你可以轻松地搭建4节点的集群。并在集群里部署包含了Nutanix Calm功能的Prism Central，PC是统一管理多个集群的多云管理平台。它还内置 和集成了自助服务，容量规划，异常行为监测的监控等高级管理功能。
 
 
 
@@ -70,7 +82,16 @@ Calm将应用看做是一个整体来管理，而不仅是一些虚拟机，实�
 
 * PC ： Prisum Central
 * PE ： Prisum Element
+* CE ： Nutanix Community
 
+
+
+## 本站的变更日志
+ 
+* 2018-1-22：增加了EC2服务高仿蓝图和LAMP堆栈自定义应用部署蓝图。
+* 2018-2-11: 增加CE安装手册
+* 2018-5-24：增加了几条CE使用技巧
+* 修订了首页内容，修订了CE部分的内容
 
 
 ## 向本网站投稿
