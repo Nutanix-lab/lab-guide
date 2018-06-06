@@ -12,6 +12,11 @@ weight = 1
 * Nutanix AHV: 20170830.58
 * Prism Central: 5.5
 
+Nutanix提供免费的社区版软件，建议的版本组合如下：
+
+* ce-2018.01.31-stable Nutanix CE
+* ce-pc-deploy-2018.01.31 Nutanix PC
+
 {{%children style="h2" description="true"%}}
 
 
